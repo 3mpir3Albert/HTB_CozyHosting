@@ -29,7 +29,7 @@ As you can see, nginx 1.18.0 is running behind, but no important information is 
 
 [![image.png](https://i.postimg.cc/xqr7KsFs/image.png)](https://postimg.cc/y3PvKTK9)
 
-After searching for information, the only data retrieved is the login panel after the path "/login". So a search was initiated using Wfuzz to list more paths and resources on the server.
+After searching for information, the only data retrieved is the login panel behind the path "/login". So a search was initiated using Wfuzz to list more paths and resources on the server.
 
 ```bash
 wfuzz -c -t 200 --hc 404,400 --hh 0 -w /usr/share/SecLists/Discovery/Web-Content/directory-list-lowercase-2.3-medium.txt http://CozyHosting.htb/FUZZ 
