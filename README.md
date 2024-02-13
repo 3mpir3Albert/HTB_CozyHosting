@@ -52,3 +52,8 @@ With that dictionary, another route called "actuator" was found, if you go into 
 ## Exploitation phase
 
 A session ID can be found in the path "sessions". With this session ID under control it is possible to perform a session hijacking. So it was copied and pasted into the cookie that the website assigned to me.
+
+Now, if you enter the login panel, the website redirects you directly to the administration section:
+
+[![Admin.png](https://i.postimg.cc/90pLFS8T/Admin.png)](https://postimg.cc/XBrfs207)
+
