@@ -39,3 +39,11 @@ The following diagram represents the paths and resources found:
 
 [![diagrama.png](https://i.postimg.cc/fRT8Ft0W/diagrama.png)](https://postimg.cc/svqPG2cb)
 
+After finding these resources on the web, you can test some potential vulnerabilities, for example by bypassing the login panel with a SQLi or Type Juggling, etc. ..... But nothing worked.
+If you find yourself in this situation and you have tested all possible vulnerabilities, it is likely that you have not done a thorough reconnaissance.  Therefore, Wfuzz was ran again with another dictionary:
+
+```bash
+wfuzz -c -t 200 --hc 404,400 --hh 0 -w /usr/share/SecLists/Discovery/Web-Content/combined_directories.txt http://CozyHosting.htb/FUZZ
+```
+
+With that dictionary, another route called "actuators" was found, if you go into it you will find more paths, as shown behind:
