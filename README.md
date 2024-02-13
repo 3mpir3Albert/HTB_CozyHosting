@@ -49,5 +49,6 @@ wfuzz -c -t 200 --hc 404,400 --hh 0 -w /usr/share/SecLists/Discovery/Web-Content
 With that dictionary, another route called "actuator" was found, if you go into it you will find more paths, as shown behind:
 
 [![image.png](https://i.postimg.cc/DfgtjbC0/image.png)](https://postimg.cc/SjnTjjbb)
+## Exploitation phase
 
 A session ID can be found in the path "sessions". With this session ID under control it is possible to perform a session hijacking. So it was copied and pasted into the cookie that the website assigned to me.
