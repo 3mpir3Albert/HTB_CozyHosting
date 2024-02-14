@@ -96,4 +96,4 @@ The reverse shell was encoded with the base64 algorithm to avoid problems when s
 ## Post-Exploitation phase
 ### Privilege escalation to Josh
 
-After gaining access to the ofbiz user, it is time to recognise the system. But nothing was found.
+After gaining access to the app user, it is time to do a reconnaissance of the system. But nothing was found.
