@@ -102,7 +102,9 @@ After gaining access to the app user, it's time to do a system recon. A couple o
 - And a postrgreSQL running on port 5432.
  
 The .jar extension is typical of two types of Java programming language files. On the one hand, a .jar file can be a Java application file, i.e. a program that, as such, can be executed.
+
 On the other hand, a .jar file usually contains a library with several files. The .jar extension is short for Java Archive and usually contains, as the name suggests, several Java files and metadata that are sent synthesised and compressed. In addition to .jar files, this extension can also contain images, audio files or other formats and works similarly to a .zip file.
+
 Because of the last comment there are two possible ways to see the content of that file:
 
 - Unzip the file, for example with 7z.
