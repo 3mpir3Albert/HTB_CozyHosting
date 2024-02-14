@@ -39,7 +39,7 @@ The following diagram represents the paths and resources found:
 
 [![diagrama.png](https://i.postimg.cc/fRT8Ft0W/diagrama.png)](https://postimg.cc/svqPG2cb)
 
-After finding these resources on the web, you can test some potential vulnerabilities, for example by bypassing the login panel with a SQLi or Type Juggling, etc. ..... But nothing worked.
+After finding these resources on the web, you can test some potential vulnerabilities, for example bypassing the login panel with a SQLi or Type Juggling, etc. ..... But nothing worked.
 If you find yourself in this situation and you have tested all possible vulnerabilities, it is likely that you have not done a thorough reconnaissance.  Therefore, Wfuzz was ran again with another dictionary:
 
 ```bash
