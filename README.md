@@ -95,3 +95,5 @@ The reverse shell was encoded with the base64 algorithm to avoid problems when s
 [![Evidencia.png](https://i.postimg.cc/7L8bXSTR/Evidencia.png)](https://postimg.cc/K1fZ8kf7)
 ## Post-Exploitation phase
 ### Privilege escalation to Josh
+
+After gaining access to the ofbiz user, it is time to recognise the system. But nothing was found.
