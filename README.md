@@ -96,4 +96,28 @@ The reverse shell was encoded with the base64 algorithm to avoid problems when s
 ## Post-Exploitation phase
 ### Privilege escalation to Josh
 
-After gaining access to the app user, it is time to do a reconnaissance of the system. But nothing was found.
+After gaining access to the app user, it's time to do a system recon. A couple of things could be found: 
+
+- A file called cloudhosting-0.0.1.jar.
+- And a postrgreSQL running on port 5432.
+ 
+The .jar extension is typical of two types of Java programming language files. On the one hand, a .jar file can be a Java application file, i.e. a program that, as such, can be executed.
+On the other hand, a .jar file usually contains a library with several files. The .jar extension is short for Java Archive and usually contains, as the name suggests, several Java files and metadata that are sent synthesised and compressed. In addition to .jar files, this extension can also contain images, audio files or other formats and works similarly to a .zip file.
+Because of the last comment there are two possible ways to see the content of that file:
+
+- Unzip the file, for example with 7z.
+
+```bash
+7z x cloudhosting-0.0.1.jar
+```
+
+- Or use an application like jd-gui, which allows you to see the whole content without decompressing the file.
+
+```bash
+jd-gui & 2>/dev/null disown
+```
+
+Using jd-gui you can find some credentials for accessing postgreSQL:
+
+[![credentials.png](https://i.postimg.cc/5tjXbr7Q/credentials.png)](https://postimg.cc/5Hd4msMf)
+
