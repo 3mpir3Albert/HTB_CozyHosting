@@ -125,3 +125,25 @@ Using jd-gui you can find some credentials for accessing postgreSQL:
 
 [![credentials.png](https://i.postimg.cc/5tjXbr7Q/credentials.png)](https://postimg.cc/5Hd4msMf)
 
+By entering the correct credentials and accessing the cozyhosting database you can see two hashes:
+
+```bash
+psql -h localhost -U postgres
+```
+
+[![Postgre.png](https://i.postimg.cc/KzV2yqKf/Postgre.png)](https://postimg.cc/KknVP5D3)
+
+By retrieving both hashes, it is now possible to crack them using hascat, resulting in the following file:
+
+[![cracked.png](https://i.postimg.cc/50j3Z1FH/cracked.png)](https://postimg.cc/jw0P7pcK)
+
+If you use the password that has been decrypted above, you will be logged in as the user Josh.
+### Privilege escalation to Root
+
+After logging in as Josh, it's time to do another system recon. If you have listed the user's sudo permissions, you will see that he can run the ssh command as superuser. Because of this misconfiguration, it is possible to launch a sh as the root user and get privilege escalation.
+
+```bash
+sudo ssh -o ProxyCommand=';sh 0<&2 1>&2' x
+```
+
+[![sudo.png](https://i.postimg.cc/SQgwHN2r/sudo.png)](https://postimg.cc/XXyHCWgG)
